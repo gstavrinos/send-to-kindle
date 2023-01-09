@@ -1,0 +1,14 @@
+[package]
+name = "send-to-kindle"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+# fantoccini= { version = "0.19.3" }
+# fantoccini= {version="0.20.0"}
+thirtyfour = { version = "0.31.0" }
+serde_json = { version = "1.0.91" }
+geckodriver = { version = "0.32.0" }
+serde = { version = "1.0", features = ["derive"]}
+tokio = { version = "1.24", features = ["full"] }
