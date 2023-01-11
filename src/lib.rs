@@ -27,7 +27,7 @@ pub struct Args {
    #[arg(short, long, default_value_t = String::from(""))]
    pub extension: String,
 
-   /// Seconds to wait per file to upload, before giving up.
+   /// Seconds to wait to upload per file, before giving up.
    #[arg(long, default_value_t = 60)]
    pub file_timeout: usize,
 
@@ -35,7 +35,7 @@ pub struct Args {
    #[arg(long, default_value_t = true)]
    pub geckodriver_daemon: bool,
 
-   /// Debugging mode, that runs the browser with GUI, does not automatically send the files and prompts for user input in terminal to close the window. Only for devepopment purposes.
+   /// Enable debugging mode, that runs the browser with GUI, does not automatically send the files and prompts for user input in terminal to close the window. Only for development purposes.
    #[arg(long, default_value_t = false)]
    pub debugging_mode: bool,
 
