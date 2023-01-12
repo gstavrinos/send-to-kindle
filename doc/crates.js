@@ -1,1 +1,0 @@
-window.ALL_CRATES = ["send_to_kindle"];
