@@ -2,8 +2,6 @@ use thirtyfour::prelude::{WebDriverResult, By};
 use thirtyfour::{FirefoxCapabilities, WebDriver};
 use thirtyfour::common::capabilities::firefox::FirefoxPreferences;
 
-mod tests;
-
 #[derive(clap::Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 pub struct Args {
@@ -45,6 +43,43 @@ pub struct Args {
 
 }
 
+impl Default for Args {
+    fn default() -> Args {
+        Args {
+            username: String::from(""),
+            password: String::from(""),
+            file: String::from(""),
+            directory: String::from(""),
+            extension: String::from(""),
+            file_timeout: 60,
+            geckodriver_daemon: true,
+            debugging_mode: false,
+            amazon_url: String::from("https://www.amazon.com/sendtokindle"),
+        }
+    }
+}
+
+impl Args {
+    pub fn new(u: &str, p: &str) -> Args {
+        let mut args = Args::default();
+        args.username = String::from(u);
+        args.password = String::from(p);
+        return args;
+    }
+}
+
+/// * **Parameters:**
+///
+///     - username: The amazon username as str
+///     - password: The amazon password as str
+///     - files: A list of files to be uploaded as String Vec
+///     - file_timeout: Seconds assigned to each file before uploading times out
+///     - url: The amazon url to be used
+///     - daemon: Whether to run the geckodriver daemon or not. If not, it will have to be run externally
+///     - debugging_mode: For development purposes, enables GUI on the browser, does not send the files and prompts for user input to end the process
+/// * **Description:** Send the _files_ to the kindle app and devices associated with the _username_ and _password_ amazon account
+///
+/// * **Notes:** It is recommended to use the Args::default or Args::new functions to ensure some sane defaults and easier setup. Please note that the _files_ vector of strings is not included in the Args struct and it is expected to be constructed separately.
 pub async fn send_files_to_kindle(username: &str, password: &str, files: Vec<String>, file_timeout: usize, url: &str, daemon: bool, debugging_mode: bool) -> WebDriverResult<()> {
     let mut gd_daemon = std::process::Command::new("echo").stdin(std::process::Stdio::null()).stdout(std::process::Stdio::null()).spawn()?;
     if daemon {
@@ -173,6 +208,19 @@ pub async fn send_files_to_kindle(username: &str, password: &str, files: Vec<Str
     Ok(())
 }
 
+/// * **Parameters:**
+///
+///     - username: The amazon username as str
+///     - password: The amazon password as str
+///     - f: A path to a file or directory to be uploaded as str
+///     - ext: A file format extension to filter the files to be uploaded as str
+///     - file_timeout: Seconds assigned to each file before uploading times out
+///     - url: The amazon url to be used
+///     - daemon: Whether to run the geckodriver daemon or not. If not, it will have to be run externally
+///     - debugging_mode: For development purposes, enables GUI on the browser, does not send the files and prompts for user input to end the process
+/// * **Description:** Send the _files_ to the kindle app and devices associated with the _username_ and _password_ amazon account
+///
+/// * **Notes:** It is recommended to use the Args::default or Args::new functions to ensure some sane defaults and easier setup. Please note that the _f_ str should be selected either from the file or directory field of the Args struct. _f_ is filtered based on the _ext_ parameter and the a vector of strings is constructed and passed to _send_files_to_kindle_
 pub async fn send_to_kindle(username: &str, password: &str, f: &str, ext: &str, file_timeout: usize, url: &str, daemon: bool, debugging_mode: bool) -> WebDriverResult<()> {
     let mut files = Vec::<String>::new();
     let source = std::path::Path::new(f);
