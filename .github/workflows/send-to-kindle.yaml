@@ -1,0 +1,26 @@
+name: Source and Docs Builder
+on:
+  push:
+    branches:
+      - master
+permissions:
+  contents: write
+jobs:
+  build:
+    name: Send to kindle Source and Docs builder
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out the repository
+        uses: actions/checkout@v3
+      - name: Downloading rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Building crate
+        run: cargo build --release --all-features
+      - name: Building crate's docs
+        run: cargo doc --no-deps --target-dir docs
+      - name: Deploying docs
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs
