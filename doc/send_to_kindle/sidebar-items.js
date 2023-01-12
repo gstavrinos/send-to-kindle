@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":[["send_files_to_kindle","Parameters:"],["send_to_kindle","Parameters:"]],"struct":[["Args",""]]};

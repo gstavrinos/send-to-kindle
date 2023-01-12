@@ -1,0 +1,13 @@
+/home/runner/work/send-to-kindle/send-to-kindle/docs/debug/deps/webdriver-8a038b3044171f6f.rmeta: /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/lib.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/macros.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/actions.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/capabilities.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/command.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/common.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/error.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/httpapi.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/response.rs
+
+/home/runner/work/send-to-kindle/send-to-kindle/docs/debug/deps/webdriver-8a038b3044171f6f.d: /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/lib.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/macros.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/actions.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/capabilities.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/command.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/common.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/error.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/httpapi.rs /home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/response.rs
+
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/lib.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/macros.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/actions.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/capabilities.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/command.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/common.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/error.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/httpapi.rs:
+/home/runner/.cargo/registry/src/github.com-1ecc6299db9ec823/webdriver-0.46.0/src/response.rs:
