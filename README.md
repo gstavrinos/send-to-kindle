@@ -1,8 +1,9 @@
 <img src="https://raw.githubusercontent.com/gstavrinos/send-to-kindle/master/media/send-to-kindle.png" style="width: 330px;"/>
+
 # Send to Kindle
 
 send-to-kindle is a command-line utility and rust library for sending files to your kindle app
- or devices by (ab)using the www.amazon.com./sendtokindle web interface.
+ or devices by (ab)using the www.amazon.com/sendtokindle web interface.
 
 **For this reason, it should be used with caution. Getting suspended by Amazon's spam
 prevention systems is always a possibility. USE send-to-kindle AT YOUR OWN RISK!**
