@@ -1,0 +1,21 @@
+
+name: Release Send to Kindle Crate
+on: 
+  release:
+    types:
+      - published
+jobs:
+  build:
+    name: Send to Kindle crate release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out the repository
+      uses: actions/checkout@v2
+      - name: Downloading rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Publishing crate
+        uses: katyo/publish-crates@v1
+        with:
+          registry-token: ${{ secrets.CARGO_REGISTRY_TOKEN }}
