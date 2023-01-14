@@ -7,7 +7,7 @@ keywords = ["amazon", "automation", "ebooks", "kindle", "send"]
 categories = ["command-line-utilities", "wasm"]
 description = "A command-line utility and library for sending files to your kindle app or device by (ab)using the www.amazon.com/sendtokindle web interface."
 readme = "README.md"
-homepage = "https://github.com/gstavrinos/send-to-kindle/"
+homepage = "https://gstavrinos.github.io/send-to-kindle/send_to_kindle/"
 repository = "https://github.com/gstavrinos/send-to-kindle/"
 
 [dependencies]
